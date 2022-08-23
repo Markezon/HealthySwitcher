@@ -9,8 +9,36 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Helvetica Neue Cyr Roman';
+    src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+    src: url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Cyr Bold';
+    src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+    src: url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Cyr Black';
+    src: url('../fonts/HelveticaNeueCyr-Black.eot');
+    src: url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 .container {
-    width: 1140px;
+    width: 1110px;
     margin: 0 auto;
 }
 
@@ -18,8 +46,23 @@ p {
     margin: 0ch
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+ul {
+	list-style-type: none;
+}
+
 @import 'blocks/title';
 @import 'blocks/button';
+@import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/pageup';
 @import 'blocks/form';
