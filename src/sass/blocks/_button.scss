@@ -16,4 +16,19 @@
         box-shadow: 0px 4px 4px rgba($color: $main-color, $alpha: 0.5);
         background-color: #24de53;
     }
+    
+}
+
+.btn.button_mini {
+    width: 100px;
+    height: 40px;
+    font-family: 'Helvetica Neue Cyr Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #252525;
 }
