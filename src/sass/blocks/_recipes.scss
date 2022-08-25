@@ -5,4 +5,145 @@
     &__divider {
         margin: 0 auto;
     }
+    &__wrapper {
+		margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 150px);
+		column-gap: 30px;
+		row-gap: 30px;
+        height: 540px;
+        color: #fff;
+    }
+    &__item {	
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;	
+        &_time {
+           width: 90px;
+           height: 25px;
+           background: rgba($color: #000000, $alpha: 0.5);
+           border-radius: 4px;
+           display: block;
+           margin: 0 auto;
+           margin-top: 60px;
+           text-align: center;
+           font-family: 'Helvetica Neue Cyr Black';
+           font-style: normal;
+		   font-weight: 900;
+		   font-size: 10px;
+		   line-height: 25px;
+		   letter-spacing: 1.25px;
+		   text-transform: uppercase;           
+        }
+		&_date {
+			font-family: 'Helvetica Neue Cyr Roman';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 30px;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+			margin-top: 65px;
+		}
+		&_text {
+			font-family: 'Helvetica Neue Cyr Roman';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 40px;
+			text-align: center;
+			width: 70%;
+			display: block;
+			margin: 0 auto;
+			margin-top: 25px;
+		}
+		&_chef {
+			font-family: 'Helvetica Neue Cyr Roman';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 30px;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+			margin-top: 45px;
+		}
+		&_review {
+			display: flex;
+			height: 30px;
+			margin-top: 40px;
+			justify-content: center;
+		}
+		&_icon {
+			margin-right: 10px;
+		}
+		&_number {
+			display: inline;
+			margin-right: 25px;
+		}
+    }
+    &__item.breakfast {
+        background: url(../../img/recipes/recipes1.png) center (center/cover) no-repeat;
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+    }
+	&__item2 {	
+		padding: 20px;	
+		background: #252525;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+        &_time { 
+			display: inline-block;
+			width: 85px;
+			height: 25px;  
+			background: rgba($color: #000000, $alpha: 1.0); 
+			border-radius: 4px;
+			margin-right: 10px;
+			padding-top: 5px;
+			text-align: center;
+			font-family: 'Helvetica Neue Cyr Black';
+			font-style: normal;
+			font-weight: 900;
+			font-size: 10px;
+			letter-spacing: 1.25px;
+			text-transform: uppercase;      
+        }
+		&_date {
+			display: inline;
+		}
+		&_text {
+			font-family: 'Helvetica Neue Cyr Roman';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&_wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 30px;
+			margin-top: 10px;
+		}
+		&_review {
+			display: inline;
+		}
+		&_icon {
+			display: inline;
+		}
+		&_number {
+			display: inline;
+			margin: 0 25px 0 10px;
+		}
+    }
+	&__item2.dinner {
+        background: url(../../img/recipes/recipes2.png) center (center/cover) no-repeat;
+    }
+	&__item2.sweets {
+        background: $main-color;
+		color: #000000;
+    }
+}
+.recipes__item2_time.sweets {
+	color: #fff;
 }

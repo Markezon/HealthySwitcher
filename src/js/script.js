@@ -100,7 +100,7 @@ validation
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Введите имя!'
+      errorMessage: 'Enter Your Name!'
     }
   ])
   .addField('.input-policy', [
@@ -114,19 +114,19 @@ validation
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Email обязателен',
+      errorMessage: 'Email is required',
     },
     {
       rule: 'email',
       value: true,
-      errorMessage: 'Введите корректный Email',
+      errorMessage: 'Enter correct Email',
     },
   ])
   .addField('.input-tel', [
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Телефон обязателен',
+      errorMessage: 'Phone is required',
     },
     {
       rule: 'function',
@@ -134,7 +134,7 @@ validation
         const phone = telSelector.inputmask.unmaskedvalue();
         return phone.length === 10;
       },
-      errorMessage: 'Введите корректный телефон',
+      errorMessage: 'Enter correct phone',
     },
   ]).onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
@@ -148,7 +148,7 @@ validation
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('Отправлено');
+          console.log('Sended');
         }
       }
     }
