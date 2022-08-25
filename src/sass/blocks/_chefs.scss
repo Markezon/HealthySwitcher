@@ -1,0 +1,49 @@
+.chefs {
+    background-color: #1A1A1A;
+    min-height: 400px;
+    padding-top: 90px;
+    &__divider {
+        margin: 0 auto;
+    }
+    &__wrapper {
+        margin-top: 38px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 350px;
+    }
+    &__header {
+        display: flex;
+        justify-content: start;
+        &_img {
+            margin-right: 24px;
+        }
+        &_title {
+            margin-top: 10px;
+            font-family: 'Helvetica Neue Cyr Roman';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: -0.225px;
+            color: #FFFFFF;
+        }
+        &_subtitle {
+            margin-top: 5px;
+            font-family: 'Helvetica Neue Cyr Roman';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.15px;
+            color: rgba(255, 255, 255, 0.35);            
+        }
+    }
+    &__bottom {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
