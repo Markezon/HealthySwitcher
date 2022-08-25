@@ -1,0 +1,27 @@
+.about {
+    background-color: #1A1A1A;
+    height: 150px;
+    &__wrapper {
+        position: absolute;
+        top: -200px;
+        padding-top: 60px;
+        background: #252525;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        height: 350px;
+    }
+    &__subtitle {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 65%;
+        font-family: 'Helvetica Neue Cyr Roman';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #A6A6A6;
+    }
+}
+

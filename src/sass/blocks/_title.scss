@@ -1,17 +1,25 @@
 .title {
-    font-family: 'Roboto';
-    font-size: 26px;
-    line-height: 23px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #2e2e2e;
-    text-align: center;
+    position: relative;
+    font-family: 'Helvetica Neue Cyr Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 150px;
+    letter-spacing: 0.2em;
+    color: #303030;
+    text-align: center;    
 }
-.subtitle {
-    font-family: 'Roboto';
-    font-size: 21px;
-    line-height: 24px;
-    font-weight: 300;
-    color: #2e2e2e;
-    text-align: center;
+.title2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-family: 'Helvetica Neue Cyr Roman';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: 0.2em;
+    color: #D9D9D9;
+    
 }

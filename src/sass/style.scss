@@ -43,6 +43,7 @@
 .container {
     width: 1110px;
     margin: 0 auto;
+    position: relative;
 }
 
 p {
@@ -66,6 +67,8 @@ ul {
 @import 'blocks/title';
 @import 'blocks/button';
 @import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/slider';
 @import 'blocks/menu';
 @import 'blocks/pageup';
 @import 'blocks/form';
