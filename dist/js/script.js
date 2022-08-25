@@ -31,6 +31,7 @@ burger.addEventListener('click', () => {
 	initialMenu();
 });
 
+
 overlay.addEventListener('click', () => {
 	menu.classList.remove('open');
 	overlay.classList.remove('open');
@@ -72,6 +73,103 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+////////////////////////////////////
+
+
+// inputmask
+const form = document.querySelector('.form');
+const telSelector = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telSelector);
+
+
+
+const validation = new JustValidate('.form');
+
+validation
+  .addField('.input-name', [
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'minimum of 2 characters'
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Введите имя!'
+    }
+  ])
+  .addField('.input-policy', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Please agree'
+    }
+    ])
+  .addField('.input-mail', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Email обязателен',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: 'Введите корректный Email',
+    },
+  ])
+  .addField('.input-tel', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Телефон обязателен',
+    },
+    {
+      rule: 'function',
+      validator: function() {
+        const phone = telSelector.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      },
+      errorMessage: 'Введите корректный телефон',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  }); 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,38 +178,19 @@ const swiper = new Swiper('.swiper', {
 
 $(document).ready(function(){
 	
-	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
-		$(this)
-		  .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
-		  .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
-	});
-
-	function toggleSlide(item) {
-		$(item).each(function(i) {
-			$(this).on('click', function(e) {
-				e.preventDefault();
-				$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-				$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-			})
-		});
-	};
-
-	toggleSlide('.catalog-item__link');
-	toggleSlide('.catalog-item__back');
-
 	//Modal
 
 	$('[data-modal=consultation]').on('click', function() {
-		$('.overlay, #consultation').fadeIn('slow');
+		$('.overlay2, #consultation').fadeIn('slow');
 	});
 	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+		$('.overlay2, #consultation, #thanks, #order').fadeOut('slow');
 	});
 
 	$('.button_mini').each(function(i) {
 		$(this).on('click', function() {
 			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-			$('.overlay, #order').fadeIn('slow');
+			$('.overlay2, #order').fadeIn('slow');
 		});
 	});
 
