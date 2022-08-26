@@ -1,0 +1,94 @@
+.social {
+    background-color: #1A1A1A;
+    min-height: 780px;
+    padding-top: 90px;
+    &__divider {
+        margin: 0 auto;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-top: 60px;
+        width: 350px;
+        height: 330px;        
+        background: #252525;
+        &-header {
+            padding: 25px 25px 0px 30px;
+            &_img {
+                height: 40px;
+                width: 40px;
+                display: inline;
+                margin-right: 20px;
+            }  
+            &_title {
+                font-family: 'Helvetica Neue Cyr Roman';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                color: #BFBFBF;
+                display: inline; 
+                margin-right: 50px;               
+            }           
+        }
+    }
+    &__divider {
+        height: 2px;
+        width: 100%;
+        background: #303030;
+        margin-top: 10px;
+    }
+    &__scroll {
+        height: 250px;
+        overflow-y: scroll;
+        font-family: 'Helvetica Neue Cyr Roman';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        color: #737373;
+        &_date {
+            padding: 0px 25px 0px 30px;
+        }
+        &_text {
+            padding: 0px 25px 0px 30px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        &_subtitle {
+            padding: 0px 25px 0px 30px;
+            margin-top: 10px;
+            color: #34C759;
+        }
+        &_imgs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+.social_item-header_btn.btn {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #737373;
+    display: inline;
+    font-family: 'Helvetica Neue Cyr Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #737373;
+    background-color: #252525;
+    &:hover {
+        transform: scale(105%);
+        box-shadow: 0px 4px 4px rgba($color: $main-color, $alpha: 0.5);
+        background-color: #24de53;
+        color: #1A1A1A;
+    }
+
+}
