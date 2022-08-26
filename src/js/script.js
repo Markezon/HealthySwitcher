@@ -177,6 +177,20 @@ validation
 
 
 $(document).ready(function(){
+ 
+  //tab slide left
+  function toggleSlide(item) {
+		$(item).each(function(i) {
+			$(this).on('click', function(e) {
+				e.preventDefault();
+				$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+				$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+			})
+		});
+	};
+
+	toggleSlide('.catalog-item__link');
+	toggleSlide('.catalog-item__back');
 	
 	//Modal
 
@@ -193,6 +207,35 @@ $(document).ready(function(){
 			$('.overlay2, #order').fadeIn('slow');
 		});
 	});
+
+
+
+
+
+    //scroll
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1000) {
+        $('.pageup').fadeIn();
+      } else {
+        $('.pageup').fadeOut();
+      }
+    });
+    
+    $("a[href^='#']").click(function(){
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+    });
+  
+    $("a[href^='#']").click(function(){
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+    });
+
+
+    
 
 
 	new WOW().init();
