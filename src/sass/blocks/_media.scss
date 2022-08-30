@@ -11,6 +11,14 @@
 	.swiper {
 		width: 100%;
 	}
+	.work {
+		&__wrapper {
+			justify-content: space-around;
+		}
+		&__item {
+			margin: 10px;
+		}
+	}
 
 
 }
@@ -45,6 +53,12 @@
 	.slider {
 		&__wrapper {
 			width: 100%;
+		}
+	}
+	.work {
+		padding-top: 20px;
+		&__wrapper {
+			margin-top: 20px;
 		}
 	}
 
