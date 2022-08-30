@@ -65,12 +65,18 @@ menu.addEventListener('click', (e) => {
 
 const swiper = new Swiper('.swiper', {
 	loop: true,
-	slidesPerView: 2,
-	spaceBetween: 30,
+	slidesPerView: 1,
+	spaceBetween: 20,
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    }
+  },
 });
 
 ////////////////////////////////////
