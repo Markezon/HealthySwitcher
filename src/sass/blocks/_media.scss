@@ -19,6 +19,14 @@
 			margin: 10px;
 		}
 	}
+	.catalog {
+		&__content {
+			justify-content: space-around;
+		}
+		&-item {
+			margin: 5px;
+		}
+	}
 
 
 }
