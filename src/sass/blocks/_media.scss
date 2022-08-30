@@ -37,6 +37,18 @@
 			width: 320px;
 		}
 	}
+	.recipes {
+		padding-top: 20px;
+		min-height: 1130px;
+		&__wrapper {
+			margin-top: 20px;
+			grid-template-columns: 1fr;
+		}
+		&__item.breakfast {
+			grid-column: 1 / 1;
+			grid-row: 1 / 4;
+		}
+	}
 
 
 }
@@ -138,6 +150,15 @@
 		height: 340px;
 		text-align: center;
 		padding: 50px 0px;
+	}
+	.recipes {
+		&__item2 {
+			&_wrapper {
+				grid-template-columns: 1fr;
+				row-gap: 5px;
+				text-align: center;
+			}
+		}
 	}
 	
 
