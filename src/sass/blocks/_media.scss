@@ -27,6 +27,16 @@
 			margin: 5px;
 		}
 	}
+	.chefs {
+		&__wrapper {
+			margin-top: 10px;
+			justify-content: space-around;
+		}
+		&__item {
+			margin: 20px 10px;
+			width: 320px;
+		}
+	}
 
 
 }
