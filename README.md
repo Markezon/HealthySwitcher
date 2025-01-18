@@ -1,6 +1,5 @@
 # Project Work: "healthyswitcher"
 
->The application was created as part of the course assignments for Ivan Petrychenko's "Web-Developer"
 
 ## The project can be viewed by following the [link]( https://healthyswitcher.khudorenko.com/)
 
